@@ -36,6 +36,9 @@
 					</table>
 					<button>أوجد الصيغة</button>
 					<br /><br /><br />
+					{% if(formula == "" and message == "") %}
+					أدخل رمز العنصر أو المجموعة، و رقم التأكسد في المربع الصغير لكل مادة.
+					{% endif %}
 					<div id="formula" dir="ltr">
 						{% for c in formula %}
 						{% if(c == '2' or c == '3' or c == '4' or c == '5' or c == '6' or c == '7' or c == '8' or c == '9') %}
