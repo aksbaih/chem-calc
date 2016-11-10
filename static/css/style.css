@@ -1,0 +1,127 @@
+@font-face {
+    font-family: 'JF Flat';
+    src: url(jf.otf);
+}
+body{
+	padding: 0;
+	font-family: 'JF Flat';
+	overflow-x: hidden;
+}
+#header{
+	background-color: blue;
+	color: white;
+	height: 70px;
+	font-size: 60px;
+	position: absolute;
+	margin: 0 0 0 0;
+	width: 100%;
+	padding: 20px;
+	left: 0; right: 0; top: 0;
+	z-index: 0;
+}
+#per_cont{
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 2;
+	width: 60%;
+	background-color: blue;
+	height: 100%;
+	color: white;
+	font-size: 50px;
+	text-align: center;
+	
+    background: blue; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(blue, white); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(blue, white); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(blue, white); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(blue, white); /* Standard syntax */
+
+}
+#per{
+	width: 100%;
+	margin-top: auto;
+}
+.bblue{
+	background-color: blue;
+}
+#calc_con{
+	position: absolute;
+	top: 130px;
+	text-align: center;
+	width: 40%;
+	font-size: 30px;
+}
+#calc_con table tbody tr {
+	width: 40%;
+	text-align: center;
+}
+#num{
+	font-size: 25px;
+	width: 38px;
+	margin-left: -10px;
+}
+#formula{
+	font-size: 55px;
+	color: black;
+	font-family: Arial;
+	text-shadow: 0px 0px 10px blue;
+}
+#message{
+	color: red;
+}
+small{
+	font-size: 60%;
+}
+
+input[type=text], input[type=number], input[type=password], button {
+	padding: 10px;
+	font-size: 50px;
+	color: #555555;
+	margin: 20px;
+	border-width: 0px;
+	border-radius: 5px;
+	border-color: gray;
+	text-align: center;
+	width: 90px;
+	outline: none;
+	box-shadow: 0px 0px 5px black;
+}
+
+button {
+	font-family: inherit;
+	background-color: #6495ED;
+	color: white;
+	cursor: pointer;
+	text-align: center;
+	padding: 15px;
+	width: 340px;
+}
+
+input[type=text]:hover, input[type=password]:hover {
+	-webkit-animation: hov 0.5s;
+	-webkit-animation-name: hov;
+	box-shadow: 0px 0px 5px blue;
+}
+button:hover{
+	-webkit-animation: hov2 0.5s;
+	-webkit-animation-name: hov2;
+	background-color: #103a89;
+}
+@-webkit-keyframes hov2{
+	from {
+		background-color: #6495ED;
+	}
+	to {
+		background-color: #103a89;
+	}
+}
+@-webkit-keyframes hov{
+	from {
+		box-shadow: 0px 0px 0px blue;
+	}
+	to {
+		box-shadow: 0px 0px 10px blue;
+	}
+}
+

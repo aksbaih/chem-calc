@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>الصيغة الكيميائية</title>
+	<link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+	<meta charset="utf-8" />
+</head>
+<body dir="rtl">
+<div id="header">
+	النادي العلمي
+</div>
+<div>
+<table>
+	<tbody>
+		<tr>
+			<td>
+				<form method="POST" action="home">
+				<div id="calc_con">
+					<br />
+					الحاسبة
+					<br /><br />
+					<table align="center">
+						<tr>
+							<td>
+								<sup><sup><input value="{{ form['num1'] }}" type="number" id="num" name="num1"/></sup></sup>
+								<input type="text" name="name1" value="{{ form['name1'] }}" />
+							</td>
+							<td>
+								+
+							</td>
+							<td>
+								<sup><sup><input type="number" id="num" value="{{ form['num2'] }}" name="num2" /></sup></sup>
+								<input type="text" name="name2" value="{{ form['name2'] }}" />
+							</td>
+						</tr>
+					</table>
+					<button>أوجد الصيغة</button>
+					<br /><br /><br />
+					<div id="formula" dir="ltr">
+						{% for c in formula %}
+						{% if(c == '2' or c == '3' or c == '4' or c == '5' or c == '6' or c == '7' or c == '8' or c == '9') %}
+						<small>{{ c }}</small>
+						{% elif(c != '1') %}
+						{{ c }}
+						{% endif %}
+						{% endfor %}
+					</div>
+					<div id="message">
+						{% if message == 1 %}
+						الذرية يجب ألا تساوي صفر
+						{% elif message == 2 %}
+						الذريتان يجب أن تتخالفا في الإشارة
+						{% endif %}
+					</div>
+				</div>
+			</form>
+			</td>
+			<td class="bblue">
+				<div id="per_cont">
+					<br /><br /><br />
+					الجدول الدوري للعناصر
+					<img id="per" align="bottom" src="../static/imgs/periodic.png" />
+				</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<a href="http://www.akrams.top" target="_blank">أكرم صبيح</a>
+</div>
+<script>document.getElementsByTagName("body")[0].setAttribute("style", "zoom: " + (window.innerWidth / 1328) + ";");</script>
+</body>
+</html>
